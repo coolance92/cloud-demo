@@ -10,6 +10,7 @@
     <modules>
         <module>user-service</module>
         <module>order-service</module>
+        <module>eureka-server</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -26,7 +27,6 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <spring-cloud.version>Hoxton.SR10</spring-cloud.version>
-        <mysql.version>5.1.47</mysql.version>
         <mybatis.version>2.1.1</mybatis.version>
     </properties>
 
