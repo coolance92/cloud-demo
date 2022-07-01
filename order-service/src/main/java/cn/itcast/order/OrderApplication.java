@@ -1,6 +1,7 @@
 package cn.itcast.order;
 
-import cn.itcast.order.config.FeignClientConfig;
+import cn.itcast.feign.client.UserServiceClient;
+import cn.itcast.feign.config.DefaultFeignConfiguration;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,7 +13,7 @@ import org.springframework.web.client.RestTemplate;
 
 @MapperScan("cn.itcast.order.mapper")
 @SpringBootApplication
-@EnableFeignClients(defaultConfiguration = FeignClientConfig.class)
+@EnableFeignClients(defaultConfiguration = DefaultFeignConfiguration.class, clients = {UserServiceClient.class})
 public class OrderApplication {
 
     public static void main(String[] args) {
